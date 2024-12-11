@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh sách sinh viên</title>
+    <!-- Liên kết với file CSS để trang trí giao diện -->
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link href="path/to/font-awesome/css/all.min.css" rel="stylesheet">
+
+
+</head>
+<body>
+    <!-- Phần nội dung chính của trang -->
+    <div class="container">
+        <!-- Tiêu đề của trang -->
+        <h1>Danh sách sinh viên</h1>
+        <!-- Bảng hiển thị danh sách sinh viên -->
+        <table>
+            <thead>
+                <tr>
+                    <!-- Các tiêu đề cột trong bảng -->
+                    <th>ID</th>
+                    <th>Họ và Tên</th>
+                    <th>Ngày Sinh</th>
+                    <th>Giới Tính</th>
+                    <th>Quê Quán</th>
+                    <th>Trình Độ Học Vấn</th>
+                    <th>Nhóm</th>
+                    <th><i class="fa-solid fa-arrow-pointer"></i> Thao tác</th> <!-- Cột cho các nút Sửa, Xóa -->
+                </tr>
+            </thead>
+            <tbody>
+                            <a class="btn" href="sua.php?id=' . $row['id'] . '">Sửa</a>
+                            <a class="btn btn-delete" href="xoa.php?id=' . $row['id'] . '">Xóa</a>
+                    
+                 else {
+                    echo '<tr><td colspan="8">Không có sinh viên nào phù hợp với tìm kiếm!</td></tr>';
+                }
+
+    
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

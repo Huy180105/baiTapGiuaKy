@@ -1,0 +1,130 @@
+/* Đặt lại một số thuộc tính mặc định */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Cấu hình chung cho trang */
+body {
+    font-family:'Times New Roman', Times, serif;
+    background-color: #f4f7fb;
+    padding: 50px 20px;
+}
+
+form {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+    transition: all 0.3s ease;
+}
+
+form h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #007bff;
+}
+
+/* Các label của form */
+form label {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 10px;
+    display: block;
+}
+
+/* Các trường nhập liệu */
+form input[type="text"],
+form input[type="date"],
+form select,
+form input[type="number"] {
+    width: 95%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+/* Tạo hiệu ứng khi nhập liệu vào các trường */
+form input[type="text"]:focus,
+form input[type="date"]:focus,
+form select:focus,
+form input[type="number"]:focus {
+    border-color: #007bff;
+    background-color: #f1f8ff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Hiệu ứng hover cho các trường nhập */
+form input[type="text"]:hover,
+form input[type="date"]:hover,
+form select:hover,
+form input[type="number"]:hover {
+    background-color: #f9f9f9;
+}
+
+/* Nút bấm */
+form button {
+    background-color: #28a745;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hiệu ứng hover cho nút */
+form button:hover {
+    background-color: #218838;
+    transform: scale(1.02);
+}
+
+/* Nút khi được nhấn */
+form button:active {
+    background-color: #1e7e34;
+    transform: scale(0.98);
+}
+
+/* Cảnh báo hoặc thông báo lỗi */
+form .error {
+    color: #dc3545;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+/* Thông báo thành công */
+form .success {
+    color: #28a745;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+/* Responsive cho thiết bị nhỏ */
+@media (max-width: 768px) {
+    body {
+        padding: 20px;
+    }
+
+    form {
+        padding: 20px;
+    }
+
+    form h2 {
+        font-size: 1.8rem;
+    }
+
+    form button {
+        font-size: 1rem;
+        padding: 10px 15px;
+    }
+}

@@ -1,0 +1,222 @@
+/* Reset một số thuộc tính mặc định */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:'Times New Roman', Times, serif, sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    line-height: 1.6;
+    padding: 30px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    overflow: hidden;
+}
+
+h1 {
+    text-align: center;
+    font-size: 4rem;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    
+}
+
+th, td {
+    padding: 15px;
+    text-align: center;
+    font-size: 1.0rem;
+    border-bottom: 1px solid #ddd;
+    transition: background-color 0.3s ease;
+}
+
+th {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Nút chung */
+td a.btn {
+    padding: 8px 16px;
+    margin-right: 10px;
+    text-decoration: none;
+    color: white;
+    background-color: #28a745;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    text-align: center;
+    vertical-align: text-bottom;
+}
+
+td a.btn:hover {
+    background-color: #218838;
+}
+
+/* Nút xóa */
+td a.btn.btn-delete {
+    background-color: #dc3545;
+}
+
+td a.btn.btn-delete:hover {
+    background-color: #c82333;
+}
+
+/* Nút thêm */
+.btn-add {
+    display: inline-block;
+    padding: 9px;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    font-size: 14px;
+    text-decoration: none;
+    text-align: center;
+    margin: 20px auto;
+    max-width: 200px; /* Chiều rộng tối đa của nút */
+    width: 100%; /* Chiều rộng 100% để nút chiếm toàn bộ không gian */
+    height: 41px;
+}
+
+.btn-add:hover {
+    background-color: #45a049;
+}
+
+/* Form chỉnh sửa sinh viên */
+form {
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 30px auto;
+}
+
+form label {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+form input[type="text"],
+form input[type="date"],
+form select,
+form input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+form button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+/* Thông báo khi không có sinh viên */
+td[colspan="8"] {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #999;
+}
+
+/* Form tìm kiếm */
+.search-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 20px; /* Khoảng cách giữa các phần tử */
+    width: 100%;
+}
+
+.search-input {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    max-width: 400px; /* Chiều rộng tối đa của thanh tìm kiếm */
+}
+
+.search-btn {
+    padding: 12px 20px;
+    font-size: 14px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    max-width: 200px; /* Chiều rộng tối đa của nút */
+    text-align: center; /* Căn giữa nội dung nút */
+}
+
+.search-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    table, form {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    th, td {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    .btn-add {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+
+    .search-form {
+        flex-direction: column;
+    }
+
+    .search-input {
+        margin-bottom: 10px;
+    }
+}
